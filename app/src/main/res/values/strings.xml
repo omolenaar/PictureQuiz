@@ -6,4 +6,5 @@
     <string name="Animal1">Giraffe</string>
     <string name="Animal2">Frog</string>
     <string name="Animal3">Monkey</string>
+    <string name="pictureDescription">Animal</string>
 </resources>
