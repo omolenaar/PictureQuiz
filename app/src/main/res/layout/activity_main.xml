@@ -10,10 +10,13 @@
         android:id="@+id/animals"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        app:layout_constraintLeft_toLeftOf="@id/animalImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalImage">
+        android:layout_marginEnd="54dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/animalImage"
+        app:layout_constraintStart_toStartOf="@+id/animalImage"
+        app:layout_constraintTop_toBottomOf="@+id/animalImage"
+        app:layout_constraintWidth_min="wrap">
 
         <RadioButton
             android:id="@+id/Button1"
@@ -57,34 +60,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image1" />
 
-    <Button
-        android:id="@+id/prevButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:layout_marginStart="30dp"
-        android:text="@string/Prev"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="12"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/checkButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:text="@string/checkButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/Prev" />
 
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:layout_marginEnd="29dp"
-        android:text="@string/nextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/checkButton" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/nextButton" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
