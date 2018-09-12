@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,8 +52,23 @@ public class MainActivity extends AppCompatActivity {
                     currentImageIndex = 2;
                 }
                 mImageView.setImageResource(mImageNames[currentImageIndex]);
-        }
+            }
+        });
 
+        mCheckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* assign the ID of the check button to an int and use that to assign the index to an int? */
+                int radioButtonID = mGroup.getCheckedRadioButtonId();
+                View radioButton = mGroup.findViewById(radioButtonID);
+                int answerIndex = mGroup.indexOfChild(radioButton);
+
+                if (answerIndex == currentImageIndex) {
+                    Toast.makeText(getApplicationContext(),"Great!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Wrong...", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
     }
 
