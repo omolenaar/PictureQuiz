@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Picture Quiz</string>
+    <string name="Button1">Animal1</string>
+    <string name="Button2">Animal2</string>
+    <string name="Button3">Animal3</string>
+    <string name="Animal1">Giraffe</string>
+    <string name="Animal2">Frog</string>
+    <string name="Animal3">Monkey</string>
+</resources>
